@@ -25,7 +25,15 @@ const Title = withStyles({
   root: { marginBottom: 32, fontSize: 22 }
 })(Input);
 
-const AddScheduleDialog = ({ schedule: { form: { title, location, description, date }, isDialogOpen }, closeDialog, setSchedule }) => {
+const AddScheduleDialog = ({
+  schedule: {
+    form: { title, location, description, date },
+    isDialogOpen
+  },
+  closeDialog,
+  setSchedule,
+  saveSchedule
+}) => {
   return (
     <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
       <DialogActions>
