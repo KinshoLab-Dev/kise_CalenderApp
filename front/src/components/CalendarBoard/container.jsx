@@ -12,8 +12,10 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mergeProps = (stateProps, dispatchProps) => ({
+  ...stateProps,
+  ...dispatchProps,
   month: stateProps.calendar,
   calendar: createCalendar(stateProps.calendar)
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(CalendarBoard);
